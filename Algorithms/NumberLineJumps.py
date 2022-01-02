@@ -19,10 +19,10 @@ import sys
 
 def kangaroo(x1, v1, x2, v2):
     # Write your code here
-    while(x1 != x2):
+    for i in range(10000):
         x1 += v1
         x2 += v2
-        if x1 == x2:
+        if(x1 == x2):
             return "YES"
-        elif (x1 > 10000 or x2 > 10000):
-            return "NO"
+            break
+    return "NO"
