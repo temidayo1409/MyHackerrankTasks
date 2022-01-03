@@ -17,13 +17,7 @@ import sys
 
 def bonAppetit(bill, k, b):
     # Write your code here
-    sum_bill = 0
-    for i in range(len(bill)):
-        if(bill[i] == bill[k]):
-            sum_bill += 0
-        else:
-            sum_bill += bill[i]
-    anna_pay = sum_bill//2
+    anna_pay = (sum(bill) - bill[k])//2
     if(anna_pay == b):
         print("Bon Appetit")
     else:
