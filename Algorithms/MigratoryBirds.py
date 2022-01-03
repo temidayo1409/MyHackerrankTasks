@@ -15,12 +15,15 @@ import sys
 
 def migratoryBirds(arr):
     # Write your code here
-    arr_freq = [0] * len(arr)
-    freq_id = []
-
-    for i in range(len(arr)):
-        arr_freq[arr[i]] += 1 
-    for j in range(len(arr_freq)):
-        if(arr_freq[j] == max(arr_freq)):
-            freq_id.append(j)
-    return min(freq_id)
+    freq = {}
+    list_id = []
+    for i in arr:
+        if (i in freq):
+            freq[i] += 1
+        else:
+            freq[i] = 1
+ 
+    for key, value in freq.items():
+        if(value == max(freq.values())):
+            list_id.append(key)
+    return min(list_id)
